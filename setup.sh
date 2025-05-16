@@ -7,7 +7,7 @@ if ! command -v brew >/dev/null 2>&1; then
 fi
 
 echo "==> Installing apps from Brewfile..."
-brew bundle --file="$HOME/dotfiles/Brewfile"
+brew bundle --file="$HOME/dotfiles/brewfile"
 
 echo "==> Setting up Zsh plugins..."
 ZSH_CUSTOM="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"
@@ -39,8 +39,8 @@ fi
 echo "==> Linking dotfiles..."
 ln -sf "$HOME/dotfiles/.zshrc" "$HOME/.zshrc"
 mkdir -p "$HOME/.config"
-ln -sf "$HOME/dotfiles/starship.toml" "$HOME/.config/starship.toml"
-mkdir -p "$HOME/.config/Code/User"
-ln -sf "$HOME/dotfiles/vscode-settings.json" "$HOME/.config/Code/User/settings.json"
+#ln -sf "$HOME/dotfiles/starship.toml" "$HOME/.config/starship.toml"
+#mkdir -p "$HOME/.config/Code/User"
+#ln -sf "$HOME/dotfiles/vscode-settings.json" "$HOME/.config/Code/User/settings.json"
 
 echo "==> All done. Please restart your terminal for all changes to take effect."

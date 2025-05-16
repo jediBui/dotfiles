@@ -1,13 +1,26 @@
 #!/bin/bash
 set -e
 
+# --- TARS SYSTEMS CHECK: Ensure Homebrew is in the PATH ---
+if [[ ":$PATH:" != *":/opt/homebrew/bin:"* ]]; then
+  echo "==> /opt/homebrew/bin not found in PATH. Adding it temporarily."
+  export PATH="/opt/homebrew/bin:$PATH"
+fi
+
+# Optionally, ensure it's in .zshrc for the future
+if ! grep -q '/opt/homebrew/bin' "$HOME/.zshrc" 2>/dev/null; then
+  echo 'export PATH="/opt/homebrew/bin:$PATH"' >> "$HOME/.zshrc"
+  echo "==> Added Homebrew to PATH in ~/.zshrc"
+fi
+
 echo "==> Installing Homebrew (if needed)..."
 if ! command -v brew >/dev/null 2>&1; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    export PATH="/opt/homebrew/bin:$PATH"
 fi
 
 echo "==> Installing apps from Brewfile..."
-brew bundle --file="$HOME/dotfiles/brewfile"
+brew bundle --file="$HOME/dotfiles/Brewfile"
 
 echo "==> Setting up Zsh plugins..."
 ZSH_CUSTOM="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"
@@ -39,8 +52,8 @@ fi
 echo "==> Linking dotfiles..."
 ln -sf "$HOME/dotfiles/.zshrc" "$HOME/.zshrc"
 mkdir -p "$HOME/.config"
-#ln -sf "$HOME/dotfiles/starship.toml" "$HOME/.config/starship.toml"
-#mkdir -p "$HOME/.config/Code/User"
-#ln -sf "$HOME/dotfiles/vscode-settings.json" "$HOME/.config/Code/User/settings.json"
+ln -sf "$HOME/dotfiles/starship.toml" "$HOME/.config/starship.toml"
+mkdir -p "$HOME/.config/Code/User"
+ln -sf "$HOME/dotfiles/vscode-settings.json" "$HOME/.config/Code/User/settings.json"
 
 echo "==> All done. Please restart your terminal for all changes to take effect."

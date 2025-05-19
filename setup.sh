@@ -20,7 +20,7 @@ if ! command -v brew >/dev/null 2>&1; then
 fi
 
 echo "==> Installing apps from Brewfile..."
-brew bundle --file="$HOME/dotfiles/Brewfile"
+brew bundle --file="$HOME/dotfiles/brewfile"
 
 echo "==> Setting up Zsh plugins..."
 ZSH_CUSTOM="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"

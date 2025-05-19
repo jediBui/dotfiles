@@ -1,0 +1,81 @@
+{
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "chat.editor.fontFamily": "SF Mono Powerline",
+  "chat.editor.fontWeight": "SF Mono Powerline",
+  "debug.console.fontFamily": "SF Mono Powerline",
+  "editor.accessibilitySupport": "off",
+  "editor.codeLensFontFamily": "Liga SFMono Nerd Font",
+  "editor.fontFamily": "Liga SFMono Nerd Font",
+  "editor.fontSize": 14,
+  "editor.inlayHints.fontFamily": "SF Mono Powerline",
+  "editor.minimap.enabled": false,
+  "editor.tabSize": 2,
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "name": "One Dark italic",
+        "scope": [
+          "comment",
+          "entity.other.attribute-name",
+          "keyword",
+          "markup.underline.link",
+          "storage.modifier",
+          "storage.type",
+          "string.url",
+          "variable.language.super",
+          "variable.language.this"
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "name": "One Dark italic reset",
+        "scope": [
+          "keyword.operator",
+          "keyword.other.type",
+          "storage.modifier.import",
+          "storage.modifier.package",
+          "storage.type.built-in",
+          "storage.type.function.arrow",
+          "storage.type.generic",
+          "storage.type.java",
+          "storage.type.primitive"
+        ],
+        "settings": {
+          "fontStyle": ""
+        }
+      }
+    ]
+  },
+  "explorer.confirmDragAndDrop": false,
+  "files.associations": {
+    "*.yml": "ansible"
+  },
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "markdown.preview.fontFamily": "SF Mono Powerline",
+  "notebook.output.fontFamily": "SF Mono Powerline",
+  "python.defaultInterpreterPath": "/usr/bin/python3",
+  "redhat.telemetry.enabled": true,
+  "scm.inputFontFamily": "SF Mono Powerline",
+  "security.workspace.trust.untrustedFiles": "open",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "terminal.integrated.fontFamily": "SF Mono Powerline",
+  "window.commandCenter": false,
+  "workbench.colorTheme": "Atom One Dark",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.layoutControl.enabled": false,
+  "workbench.preferredDarkColorTheme": "Atom One Dark",
+  "workbench.preferredHighContrastColorTheme": "Atom One Dark",
+  "workbench.preferredHighContrastLightColorTheme": "Atom One Dark",
+  "git.openRepositoryInParentFolders": "always",
+  "workbench.preferredLightColorTheme": "Atom One Dark"
+}

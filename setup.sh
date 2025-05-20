@@ -52,7 +52,7 @@ fi
 echo "==> Linking dotfiles..."
 ln -sf "$HOME/dotfiles/.zshrc" "$HOME/.zshrc"
 mkdir -p "$HOME/.config/vscode"
-ln -sf "$HOME/dotfiles/vscode-settings.json" "$HOME/.config/Code/User/settings.json"
+ln -sf "$HOME/dotfiles/vscode-settings.json" "$HOME/.config/vscode/settings.json"
 #mkdir -p "$HOME/.config"
 #ln -sf "$HOME/dotfiles/starship.toml" "$HOME/.config/starship.toml"
 
